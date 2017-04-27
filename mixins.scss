@@ -1,0 +1,5 @@
+@mixin hr-color($color) {
+    hr {
+        background-color: $color;
+    }
+}
