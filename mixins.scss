@@ -8,7 +8,7 @@
     }
 }
 
-@mixin class-hr-color($color) {
+@mixin class-hr-color($class, $color) {
     hr.#{$class} {
         @include include-hr-color($color);
     }
