@@ -1,4 +1,23 @@
+//Size
 $hr-width-size: 100% !default;
 $hr-height-size: 1px !default;
-$hr-margin: 0 auto !default;
+
+//Margins
+$hr-margin-top: $elements-margin-top !default;
+$hr-margin-bottom: $elements-margin-bottom !default;
+$hr-margin-left: $elements-margin-left !default;
+$hr-margin-right: $elements-margin-right !default;
+//Defined margins for each screens.
+$hr-margin-for-screens: () !default;
+/*$hr-margin-for-screens: (
+    s1: (
+        top: 20px, //Not required. Define only the margins values you want to change. Example - s2: ( top: 20px ) - change only top margin for screens greater than s2
+        bottom: 20px,
+        left: 20px,
+        right: 20px,
+    ),
+    ...
+) !default;*/
+
+//Color
 $hr-color: $document-color !default;

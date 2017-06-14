@@ -2,7 +2,7 @@ hr {
     display: block;
     width: $hr-width-size;
     height: $hr-height-size;
-    margin: $hr-margin;
+    @include include-element-margin($hr-margin-top, $hr-margin-bottom, $hr-margin-left, $hr-margin-right, $hr-margin-for-screens);
     border: 0;
     padding: 0;
     background-color: $hr-color;
