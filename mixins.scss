@@ -1,15 +1,17 @@
-@mixin include-hr-color($color) {
-    background-color: $color;
-}
-
-@mixin hr-color($color) {
-    hr {
-        @include include-hr-color($color);
+@mixin include-hr-colors($colors-map) {
+    @if map-has-key($colors-map, background-color) {
+        background-color: map-get($colors-map, background-color);
     }
 }
 
-@mixin class-hr-color($class, $color) {
+@mixin hr-colors($colors-map) {
+    hr {
+        @include include-hr-color($colors-map);
+    }
+}
+
+@mixin class-hr-colors($class, $colors-map) {
     hr.#{$class} {
-        @include include-hr-color($color);
+        @include include-hr-color($colors-map);
     }
 }
