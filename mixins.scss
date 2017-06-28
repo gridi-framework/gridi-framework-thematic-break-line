@@ -1,5 +1,5 @@
 @mixin include-hr-colors($colors-map) {
-    @if map-has-key($colors-map, background-color) {
+    @if map-has-key($colors-map, background-color) and map-get($colors-map, background-color) {
         background-color: map-get($colors-map, background-color);
     }
 }
