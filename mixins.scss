@@ -6,12 +6,12 @@
 
 @mixin hr-colors($colors-map) {
     hr {
-        @include include-hr-color($colors-map);
+        @include include-hr-colors($colors-map);
     }
 }
 
 @mixin class-hr-colors($class, $colors-map) {
     hr.#{$class} {
-        @include include-hr-color($colors-map);
+        @include include-hr-colors($colors-map);
     }
 }
