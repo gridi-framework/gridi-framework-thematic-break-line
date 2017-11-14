@@ -1,3 +1,5 @@
+$hr-display: block !default;
+
 //Size
 $hr-width-size: 100% !default;
 $hr-height-size: 1px !default;
@@ -8,7 +10,7 @@ $hr-margin-bottom: $elements-margin-bottom !default;
 $hr-margin-left: $elements-margin-left !default;
 $hr-margin-right: $elements-margin-right !default;
 //Defined margins for each screens.
-$hr-margin-for-screens: () !default;
+$hr-margin-for-screens: $elements-margin-for-screens !default;
 /*$hr-margin-for-screens: (
     s1: (
         top: 20px, //Not required. Define only the margins values you want to change. Example - s2: ( top: 20px ) - change only top margin for screens greater than s2
@@ -19,5 +21,40 @@ $hr-margin-for-screens: () !default;
     ...
 ) !default;*/
 
-//Color
-$hr-color: $document-color !default;
+//Borders
+$hr-border-width: 0 !default;
+$hr-border-style: null !default;
+$hr-border-color: null !default;
+
+$hr-border-top-width: null !default;
+$hr-border-top-style: null !default;
+$hr-border-top-color: null !default;
+$hr-border-top-make-shorthand: false !default;
+
+$hr-border-bottom-width: null !default;
+$hr-border-bottom-style: null !default;
+$hr-border-bottom-color: null !default;
+$hr-border-bottom-make-shorthand: false !default;
+
+$hr-border-left-width: null !default;
+$hr-border-left-style: null !default;
+$hr-border-left-color: null !default;
+$hr-border-left-make-shorthand: false !default;
+
+$hr-border-right-width: null !default;
+$hr-border-right-style: null !default;
+$hr-border-right-color: null !default;
+$hr-border-right-make-shorthand: false !default;
+
+//Background
+$hr-background-image: null !default;
+$hr-background-position: null !default;
+$hr-background-repeat: null !default;
+$hr-background-color: $document-color !default;
+$hr-background-attachment: null !default;
+
+//Box Sizing
+$hr-box-sizing: content-box !default;
+
+//Extra style
+@mixin hr-extra-style() {}

@@ -1,10 +1,54 @@
 hr {
-    display: block;
+    display: $hr-display;
     width: $hr-width-size;
     height: $hr-height-size;
-    @include include-element-margin($hr-margin-top, $hr-margin-bottom, $hr-margin-left, $hr-margin-right, $hr-margin-for-screens);
-    border: 0;
+    @include margin-shorthand-with-screens-support((
+        top: $hr-margin-top, 
+        bottom: $hr-margin-bottom, 
+        left: $hr-margin-left, 
+        right: $hr-margin-right
+    ), $hr-margin-for-screens);
+    @include border-shorthand((
+        border: (
+            width: $hr-border-width,
+            style: $hr-border-style,
+            color: $hr-border-color,
+            make-shorthand: true
+        ),
+        border-top: (
+            width: $hr-border-top-width,
+            style: $hr-border-top-style,
+            color: $hr-border-top-color,
+            make-shorthand: $hr-border-top-make-shorthand
+        ),
+        border-bottom: (
+            width: $hr-border-bottom-width,
+            style: $hr-border-bottom-style,
+            color: $hr-border-bottom-color,
+            make-shorthand: $hr-border-bottom-make-shorthand
+        ),
+        border-left: (
+            width: $hr-border-left-width,
+            style: $hr-border-left-style,
+            color: $hr-border-left-color,
+            make-shorthand: $hr-border-left-make-shorthand
+        ),
+        border-right: (
+            width: $hr-border-right-width,
+            style: $hr-border-right-style,
+            color: $hr-border-right-color,
+            make-shorthand: $hr-border-right-make-shorthand
+        )
+    ));
     padding: 0;
-    background-color: $hr-color;
-    @include box-sizing(content-box);
+    @include background-shorthand((
+        image: $hr-background-image,
+        position: $hr-background-position,
+        repeat: $hr-background-repeat,
+        color: $hr-background-color,
+        attachment: $hr-background-attachment,
+        make-shorthand: true
+    ));
+    @include box-sizing($hr-box-sizing);
+    @include hr-extra-style();
 }

@@ -1,17 +1,23 @@
-@mixin include-hr-colors($colors-map) {
-    @if map-has-key($colors-map, background-color) and map-get($colors-map, background-color) {
-        background-color: map-get($colors-map, background-color);
-    }
+@mixin hr-extra-colors-propertys($colors-map) {}
+
+@mixin hr-colors-propertys($colors-map) {
+    @include property-from-map($colors-map, border-color);
+    @include property-from-map($colors-map, border-top-color);
+    @include property-from-map($colors-map, border-bottom-color);
+    @include property-from-map($colors-map, border-left-color);
+    @include property-from-map($colors-map, border-right-color);
+    @include property-from-map($colors-map, background-color);
+    @include h1-h6-extra-colors-propertys($colors-map);
 }
 
 @mixin hr-colors($colors-map) {
     hr {
-        @include include-hr-colors($colors-map);
+        @include hr-colors-propertys($colors-map);
     }
 }
 
 @mixin class-hr-colors($class, $colors-map) {
     hr.#{$class} {
-        @include include-hr-colors($colors-map);
+        @include hr-colors-propertys($colors-map);
     }
 }
