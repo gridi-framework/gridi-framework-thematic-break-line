@@ -8,38 +8,13 @@ hr {
         left: $hr-margin-left, 
         right: $hr-margin-right
     ), $hr-margin-for-screens);
-    @include border-shorthand((
+    @include border-shorthand(map-merge((
         border: (
             width: $hr-border-width,
             style: $hr-border-style,
             color: $hr-border-color,
             make-shorthand: true
-        ),
-        border-top: (
-            width: $hr-border-top-width,
-            style: $hr-border-top-style,
-            color: $hr-border-top-color,
-            make-shorthand: $hr-border-top-make-shorthand
-        ),
-        border-bottom: (
-            width: $hr-border-bottom-width,
-            style: $hr-border-bottom-style,
-            color: $hr-border-bottom-color,
-            make-shorthand: $hr-border-bottom-make-shorthand
-        ),
-        border-left: (
-            width: $hr-border-left-width,
-            style: $hr-border-left-style,
-            color: $hr-border-left-color,
-            make-shorthand: $hr-border-left-make-shorthand
-        ),
-        border-right: (
-            width: $hr-border-right-width,
-            style: $hr-border-right-style,
-            color: $hr-border-right-color,
-            make-shorthand: $hr-border-right-make-shorthand
-        )
-    ));
+        )), $hr-borders));
     padding: 0;
     @include background-shorthand((
         image: $hr-background-image,
