@@ -28,4 +28,4 @@ $hr-background-attachment: null !default;
 $hr-box-sizing: content-box !default;
 
 //Extra style
-@mixin hr-extra-style() {}
+//@mixin hr-extra-style() {} //Create this mixin before import module when you want add some special style for element

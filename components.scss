@@ -25,5 +25,7 @@ hr {
         make-shorthand: true
     ));
     @include box-sizing($hr-box-sizing);
-    @include hr-extra-style();
+    @if mixin-exists(hr-extra-style) {
+        @include hr-extra-style();
+    }
 }

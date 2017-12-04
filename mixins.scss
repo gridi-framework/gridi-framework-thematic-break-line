@@ -1,9 +1,11 @@
-@mixin hr-extra-colors-propertys($colors-map) {}
+//@mixin hr-extra-colors-propertys($colors-map) {} //Create this mixin before import module when you want add some special colors style for element
 
 @mixin hr-colors-propertys($colors-map) {
     @include property-from-map($colors-map, border-color);
     @include property-from-map($colors-map, background-color);
-    @include hr-extra-colors-propertys($colors-map);
+    @if mixin-exists(hr-extra-colors-propertys) {
+        @include hr-extra-colors-propertys($colors-map);
+    }
 }
 
 @mixin hr-colors($colors-map) {
